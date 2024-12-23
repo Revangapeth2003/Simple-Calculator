@@ -12,16 +12,17 @@ body {
   background: hsl(0, 0%, 15%);
   border-radius: 15px;
   max-width: 500px;
+  width: 100%;
   overflow: hidden;
+  padding: 15px;
 }
 
 #display {
   width: 100%;
   padding: 20px;
-  text-align: left;
+  text-align: right;
   font-size: 5rem;
   background: hsl(0, 0%, 45%);
-
   font-weight: bold;
   border: none;
   outline: none;
@@ -36,6 +37,11 @@ button {
   color: white;
   font-size: 3rem;
   font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+button:active {
+  background-color: hsl(0, 0%, 40%);
 }
 
 #keys {
@@ -44,7 +50,63 @@ button {
   gap: 10px;
   padding: 25px;
 }
-.calcBtn{
+
+.calcBtn {
   background: greenyellow;
   color: black;
+}
+
+@media (max-width: 768px) {
+  #display {
+    font-size: 4rem;
+    padding: 15px;
+  }
+
+  button {
+    width: 80px;
+    height: 80px;
+    font-size: 2.5rem;
+  }
+
+  #keys {
+    gap: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  #display {
+    font-size: 3.5rem;
+    padding: 10px;
+  }
+
+  button {
+    width: 70px;
+    height: 70px;
+    font-size: 2rem;
+  }
+
+  #keys {
+    gap: 5px;
+  }
+}
+
+@media (max-width: 360px) {
+  #calculator {
+    padding: 10px;
+  }
+
+  #display {
+    font-size: 3rem;
+    padding: 8px;
+  }
+
+  button {
+    width: 60px;
+    height: 60px;
+    font-size: 1.8rem;
+  }
+
+  #keys {
+    gap: 3px;
+  }
 }
